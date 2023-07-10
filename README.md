@@ -1,1 +1,0 @@
-# MindScope-AI-Project
