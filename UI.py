@@ -1,9 +1,13 @@
+import os
 import streamlit as st
 import av
 import streamlit.logger
 import numpy as np
 import cv2
 from streamlit_webrtc import VideoTransformerBase, webrtc_streamer
+
+
+
 
 # Define a video transformer that zooms out the frame
 class ZoomOutTransformer(VideoTransformerBase):
@@ -16,6 +20,8 @@ class ZoomOutTransformer(VideoTransformerBase):
 
         return frame_zoomed
 
+
+    
 # Create a Streamlit app
 def app():
     # Set the title of the app
@@ -49,9 +55,15 @@ def app():
         if ctx.video_transformer:
             frame_zoomed = ctx.video_transformer.frame_out
             st.image(frame_zoomed, channels="BGR")
+        
+
+
 
     except Exception as e:
         st.error("An error occurred. Please check your input or try again later.")
+
+
+
 
 if __name__ == "__main__":
     app()
