@@ -72,7 +72,7 @@ class VideoCaptureTransformer(VideoTransformerBase):
 
         return frame_zoomed
 
-# Modify your Streamlit app to use the VideoCaptureTransformer
+# Modify the app to use the VideoCaptureTransformer
 def app():
     # Set the title of the app
     st.title("Webcam")
